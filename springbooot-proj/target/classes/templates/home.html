@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>TABLE USER | <a href="login.html">Войти</a></h1>
+<h4>Все пользователи</h4>
+<form>
+    Поиск по имени пользователя: <input type="text" name="name"><br>
+    <input type="submit" value="Поиск"/>
+</form>
+<#list userList as users>
+    <div>
+        <p><b>${users.name}</b> ${users.email} | <a href="/users/${users.id}">Подробнее...</a></p>
+    </div>
+    <#else>
+    <h3>Такого пользователя нет</h3>
+</list>
+<hr>
+<h3>Создать нового пользователя</h3>
+<form action="/users/create" method="post">
+    Name: <input type="text" name="Name"/><br><br>
+    Lastname: <input type="text" name="Lastname"/><br><br>
+    Email: <input type="text" name="Email"/><br><br>
+    Password: <input type="text" name="password"/><br><br>
+    <input type="submit" value="Добавить пользователя"/>
+</form>
+</body>
+</html>

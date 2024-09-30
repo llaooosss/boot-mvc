@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>TABLE USER</h1>
+<h4>Подробная информация о пользователе</h4>
+<b>Имя пользователя: </b>${users.name}<br>
+<b>Фамилия пользователя: </b>${users.lastname}<br>
+<b>Почта пользователя: </b>${users.email}<br>
+<b>Пароль пользователя: </b>${users.password}<br>
+<hr>
+<form action="/users/delete/${users.id}" method="post">
+    <input type="submit" value="Удалить пользователя"/>
+</form>
+</body>
+</html>
